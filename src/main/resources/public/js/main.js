@@ -3,8 +3,22 @@
  */
 var app = angular.module("mainApp",[]);
 app.controller("AppCtrl",function($scope,$http){
+
     $scope.arr ={};
-    $http.get("http://localhost:8080/hi").success(function(data){
-        $scope.arr=data;
-    })
+    $scope.user={isRegistered:false,
+        token : -1
+    }
+    $scope.sendForm = function(user){$http.post("/getToken",user)
+        .success(function(data, status, headers, config){
+        $scope.user.token=data;
+            $scope.user.isRegistered=true;
+            $scope.updatePage();
+            console.log(user);
+    })};
+    $scope.updatePage = function(){$http.get("/getCurrentUser",{
+         headers: {'X-Auth-Token': $scope.user.token}
+    }).success(function(data){
+        $scope.arr = data;
+        $scope.frName=data.username})}
+
 })

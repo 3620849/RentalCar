@@ -1,10 +1,7 @@
 package com.qualitest.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.Entity;
@@ -24,8 +21,8 @@ import javax.validation.constraints.NotNull;
 public class UserAutority implements GrantedAuthority {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnore
     @Id
+    @JsonIgnore
     private User user;
 
     @NotNull
@@ -35,4 +32,5 @@ public class UserAutority implements GrantedAuthority {
     public String getAuthority() {
         return authority;
     }
+
 }

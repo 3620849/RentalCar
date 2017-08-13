@@ -3,10 +3,10 @@ package com.qualitest.demo.dao;
 import com.qualitest.demo.model.User;
 import com.qualitest.demo.model.UserAutority;
 import lombok.NonNull;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import javax.persistence.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,16 +17,20 @@ import java.util.Optional;
 public class UserDao {
     @PersistenceContext
     EntityManager em;
-public Optional<User> findUserByName(@NonNull String name){
+    public User findUserByName(@NonNull String name){
+    TypedQuery<User> query = em.createQuery("SELECT u FROM User u WHERE u.username = '"+name+"'",User.class);
+        User user = null;
+        try {
+            user = query.getSingleResult();
+        }catch (NoResultException e){
+            throw new UsernameNotFoundException("USER NOT FOUND");
+        }
+   // System.out.println(user + "userAut="+user.getAuthorities().get(0).getAuthority());
 
-    User user = (User)em.createQuery("SELECT u FROM User u WHERE u.username ="+name).getSingleResult();
-    if(user!=null){
-       List<UserAutority> autorities= (List<UserAutority>)em.createQuery("SELECT ua FROM UserAutority ua WHERE ua.User.Id ="+user.getId()).getResultList();
-        user.setAuthorities(autorities);
-    }
-    System.out.println(user);
-    return Optional.ofNullable(user);
+    return user;
 
 }
-
+    public Optional<User> findById(int id) {
+        return Optional.ofNullable(em.find(User.class,id));
+    }
 }
