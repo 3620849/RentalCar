@@ -84,12 +84,24 @@
                     <h4 class="card-title">Entered as ${username}</h4>
                     <p class="card-text">You role ${roles}</p>
                     <p class="card-text">Data from promice:{{arr}}</p>
-                    <p ng-model = "${username}">New Username {{frName}} </p>
+                    <p>New Username {{frName}} </p>
                 </div>
+                <br>
+                <div class="card bg-light  " >
+                    <div class="card-header">Person Data</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Entered as ${username}</h4>
+                        <p class="card-text">You role ${roles}</p>
+                        <p class="card-text">Data from promice:{{arr2}}</p>
+                        <p>New Username {{frName}} </p>
+                    </div>
+                </div>
+
             </div>
 
+    </div>
 
-        </main>
+
     </div>
 </body>
 <script type="text/javascript" src="js/angular.js"></script>

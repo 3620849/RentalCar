@@ -12,6 +12,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 /**
  * Created by UA C on 23.07.2017.
@@ -20,9 +21,9 @@ import java.time.LocalDateTime;
 @RestController
 public class HiCtrl {
     @Autowired
-    public UserDao userDao;
+    private UserDao userDao;
     @Autowired
-    TokenHandler tokenHandler;
+    private TokenHandler tokenHandler;
 
     @RequestMapping(value = "/hi", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
@@ -37,13 +38,14 @@ public class HiCtrl {
         User savedUser = userDao.findUserByName(loginUser.getUsername());
         if(tokenHandler.checkMatchesPasswords(savedUser,loginUser)){
 
-            return tokenHandler.generateTokenId(savedUser.getId() , LocalDateTime.now().plusSeconds(300));
+            return tokenHandler.generateTokenId(savedUser.getId() , LocalDateTime.now().plusHours(1));
         };
 
         return "-1";
     }
     @RequestMapping(value = "/getCurrentUser", method = RequestMethod.GET)
     public User getCurrentUser(){
+
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = null;
         try{
@@ -57,4 +59,5 @@ public class HiCtrl {
         }
         return user;
     }
+
 }

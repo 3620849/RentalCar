@@ -22,6 +22,7 @@ import java.util.List;
 @Entity
 @Table(name = "User")
 public  class User implements UserDetails {
+
     @Id
     private int Id;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER, orphanRemoval = true)
@@ -32,7 +33,8 @@ public  class User implements UserDetails {
     private boolean accountNonLocked;
     private boolean credentialsNonExpired;
     private boolean enabled;
-
+    /*@OneToOne(mappedBy = "user",fetch = FetchType.LAZY)
+    private UserData userData;*/
     //helper method to set roles for this user
     public void grantRole(Role role) {
         if (authorities == null) {

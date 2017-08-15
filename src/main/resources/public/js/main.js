@@ -9,16 +9,37 @@ app.controller("AppCtrl",function($scope,$http){
         token : -1
     }
     $scope.sendForm = function(user){$http.post("/getToken",user)
-        .success(function(data, status, headers, config){
-        $scope.user.token=data;
-            $scope.user.isRegistered=true;
-            $scope.updatePage();
+        .then(function(data, status, headers, config){
+        $scope.user.token=data.data;
+
+            if(data.data!=-1){
+            $scope.user.isRegistered=true;}
+            $scope.currentUser();
+
             console.log(user);
-    })};
-    $scope.updatePage = function(){$http.get("/getCurrentUser",{
+    },function(error){console.log(error)})};
+
+    $scope.currentUser = function(){$http.get("/getCurrentUser",{
          headers: {'X-Auth-Token': $scope.user.token}
-    }).success(function(data){
+    }).then(function(data){
         $scope.arr = data;
-        $scope.frName=data.username})}
+        $scope.user.id=data.data.id;
+            $scope.getUserData();
+             },
+    function(error){
+
+        console.log(error)
+    })}
+
+
+    $scope.getUserData = function(){
+        $http.get("/api/getUserData/"+$scope.user.id,{
+            headers: {'X-Auth-Token': $scope.user.token}})
+        .then(function(response, status, headers, config){
+            $scope.arr2=response.data;
+        },function(error){
+            console.log(error.data)
+        })};
+
 
 })

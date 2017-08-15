@@ -6,6 +6,7 @@ import com.qualitest.demo.dao.UserDao;
 import com.qualitest.demo.model.Role;
 import com.qualitest.demo.model.User;
 
+import com.qualitest.demo.model.UserData;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

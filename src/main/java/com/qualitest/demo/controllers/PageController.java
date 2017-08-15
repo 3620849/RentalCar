@@ -29,6 +29,7 @@ public class PageController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getIndexPage(Model model) {
+
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = null;
         try{

@@ -33,8 +33,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .authorizeRequests()
                 .antMatchers("/lib/**","/js/**","/getToken","/*").permitAll()
                 .anyRequest().authenticated()
-                .and()
-                .formLogin().permitAll()//esli formlogin bez loginpage to budet custom login page viskakivat
+                /*.and()
+                .formLogin().permitAll()//esli formlogin bez loginpage to budet custom login page viskakivat*/
                 .and()
                 .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll();
     }
