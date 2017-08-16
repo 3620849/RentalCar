@@ -12,7 +12,7 @@
     }
     .sidebar {
         position: fixed;
-        top: 50px;
+        top: 0px;
         bottom: 0;
         left: 0;
         z-index: 1000;
@@ -25,10 +25,14 @@
     main {
         position: inherit;
     }
+    #loginForm{
+        margin-top: 50px;
+    }
 
 </style>
 
 <body ng-controller="AppCtrl" ng-init="frName = '${username}'">
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -44,10 +48,10 @@
                 <a class="nav-link" href="#">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" ng-click="getRegForm()">Register</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link disabled" ">Disabled</a>
             </li>
         </ul>
     </div>
@@ -59,13 +63,13 @@
 
         <div  class="col-3 bg-light sidebar">
 
-            <form name="loginForm" ng-show ="!user.isRegistered" ng-submit="sendForm(user)" method="post">
+            <form id="loginForm" name="loginForm" ng-show ="!user.isRegistered" ng-submit="sendForm(user)" method="post">
                 <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon bg-secondary" id="sizing-addon2">@</span>
                 <input type="text" class="form-control" placeholder="e-mail" name="mail" ng-model="user.username" >
             </div>
-                    <br>
+            <br>
             <div class="input-group">
                 <input type="password" class="form-control" placeholder="password" name="password" ng-model="user.password" >
                  <span class="input-group-btn">
@@ -74,8 +78,7 @@
             </div>
                 </div>
             </form>
-
-
+            <ng-include src="'lib/rform.html'"></ng-include>
         </div>
         <main class="container col-5  ml-auto">
             <div class="card bg-light  " >
@@ -100,7 +103,6 @@
             </div>
 
     </div>
-
 
     </div>
 </body>

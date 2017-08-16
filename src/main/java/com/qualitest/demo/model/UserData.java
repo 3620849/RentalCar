@@ -24,8 +24,8 @@ public class UserData {
     private String userPhone;
     @OneToOne
     private User user;
-    @LazyCollection(LazyCollectionOption.FALSE)
-    @OneToMany/*(mappedBy = "userData")*/
+
+    @OneToMany  (mappedBy = "userData")
     private List<Car> carInUse;
 
 }

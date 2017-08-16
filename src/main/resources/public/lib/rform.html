@@ -1,0 +1,15 @@
+<form id="registerForm" ng-submit="registerUser(user)">
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon bg-secondary" id="sizing-addon2">@</span>
+            <input type="text" class="form-control" placeholder="e-mail" name="mail" ng-model="user.username" >
+        </div>
+<br>
+        <div class="input-group">
+            <input type="password" class="form-control" placeholder="password" name="password" ng-model="user.password" >
+                 <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="submit">Reg</button>
+                </span>
+        </div>
+    </div>
+</form>

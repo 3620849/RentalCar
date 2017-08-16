@@ -8,5 +8,5 @@ import org.springframework.security.core.GrantedAuthority;
  */
 @Getter
 public enum Role {
-    USER,ADMIN,ROLE_ANONYMOUS;
+    ROLE_USER,ROLE_ADMIN,ROLE_ANONYMOUS;
 }

@@ -29,7 +29,7 @@ public class RentalCarApplicationTests {
 	@Test
 	public void contextLoads() {
 		PasswordEncoder pe = new BCryptPasswordEncoder();
-		System.out.println(pe.encode("qq"));
+		System.out.println(pe.encode("123"));
 
 		TokenHandler tokenHandler = new TokenHandler();
 		String token = tokenHandler.generateTokenId(0 , LocalDateTime.now().plusSeconds(60));

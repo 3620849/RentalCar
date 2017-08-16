@@ -93,4 +93,9 @@ public class UserDao {
     public Optional<User> findById(int id) {
         return Optional.ofNullable(em.find(User.class,id));
     }
+
+    @Transactional
+    public void addUser(@NonNull User user) {
+        em.persist(user);
+    }
 }

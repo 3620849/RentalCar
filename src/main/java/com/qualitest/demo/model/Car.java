@@ -1,12 +1,13 @@
 package com.qualitest.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
-import net.minidev.json.annotate.JsonIgnore;
+
 
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -19,9 +20,9 @@ import javax.persistence.ManyToOne;
 public class Car {
     @Id
     private int id;
-   /*
+    @JsonIgnore
     @ManyToOne
-    private UserData userData;*/
+    private UserData userData;
     private String vendor;
     private String model;
     private int year;

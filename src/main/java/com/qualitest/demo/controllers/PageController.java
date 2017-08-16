@@ -3,6 +3,8 @@ package com.qualitest.demo.controllers;
 import com.qualitest.demo.model.Role;
 import com.qualitest.demo.model.User;
 import com.qualitest.demo.model.UserAutority;
+import com.qualitest.demo.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -27,6 +29,7 @@ import static java.util.stream.Collectors.joining;
 public class PageController {
 
 
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getIndexPage(Model model) {
 
@@ -45,6 +48,7 @@ public class PageController {
         model.addAttribute("roles",user.getAuthorities().stream().map(s -> s.getAuthority()).collect(joining(",")));
         return "index";
     }
+
 
     /*@RequestMapping(value = "/login")
     required false znachit cto peremennaya v URL mojet bit a mojet i net

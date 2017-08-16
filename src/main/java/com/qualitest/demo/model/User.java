@@ -22,7 +22,7 @@ import java.util.List;
 @Entity
 @Table(name = "User")
 public  class User implements UserDetails {
-
+    @GeneratedValue
     @Id
     private int Id;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER, orphanRemoval = true)

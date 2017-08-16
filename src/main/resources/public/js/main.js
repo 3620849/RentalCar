@@ -17,7 +17,7 @@ app.controller("AppCtrl",function($scope,$http){
             $scope.currentUser();
 
             console.log(user);
-    },function(error){console.log(error)})};
+    },function(error){console.log(error.data)})};
 
     $scope.currentUser = function(){$http.get("/getCurrentUser",{
          headers: {'X-Auth-Token': $scope.user.token}
@@ -28,7 +28,7 @@ app.controller("AppCtrl",function($scope,$http){
              },
     function(error){
 
-        console.log(error)
+        console.log(error.data)
     })}
 
 
@@ -40,6 +40,10 @@ app.controller("AppCtrl",function($scope,$http){
         },function(error){
             console.log(error.data)
         })};
+
+    $scope.registerUser = function(user){$http.post("/register",user)
+        .then(function(data, status, headers, config){
+        },function(error){console.log(error.data)})};
 
 
 })

@@ -5,6 +5,7 @@ import com.qualitest.demo.model.Role;
 import com.qualitest.demo.model.User;
 import com.qualitest.demo.services.TokenAuthService;
 import com.qualitest.demo.services.TokenHandler;
+import com.qualitest.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
@@ -24,6 +25,8 @@ public class HiCtrl {
     private UserDao userDao;
     @Autowired
     private TokenHandler tokenHandler;
+    @Autowired
+    UserService userService;
 
     @RequestMapping(value = "/hi", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
@@ -59,5 +62,13 @@ public class HiCtrl {
         }
         return user;
     }
-
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public void register(@RequestBody User user){
+        user.setAccountNonExpired(true);
+        user.setCredentialsNonExpired(true);
+        user.setAccountNonLocked(true);
+        user.setEnabled(true);
+        user.grantRole(Role.ROLE_USER);
+        userService.addNewUser(user);
+    }
 }
