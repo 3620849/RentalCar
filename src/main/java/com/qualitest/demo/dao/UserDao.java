@@ -98,4 +98,5 @@ public class UserDao {
     public void addUser(@NonNull User user) {
         em.persist(user);
     }
+
 }

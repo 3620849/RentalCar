@@ -1,17 +1,17 @@
-<form id="registerForm" ng-submit="registerUser(user)">
+<form   name="loginForm" ng-submit="sendForm(user)" method="post">
     <div class="form-group">
         <div class="input-group">
             <span class="input-group-addon bg-secondary" id="sizing-addon2">@</span>
             <input type="text" class="form-control" placeholder="e-mail" name="mail" ng-model="user.username" >
         </div>
-<br>
+        <br>
         <div class="input-group">
             <input type="password" class="form-control" placeholder="password" name="password" ng-model="user.password" >
                  <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="submit">Reg</button>
+                  <button class="btn btn-secondary" type="submit">Go!</button>
                 </span>
         </div>
         <br>
-        <button type="button"  ng-click="$parent.getLoginForm(false)" class="btn btn-outline-info">Login</button>
+        <button type="button"  ng-click="$parent.getRegisterForm()" class="btn btn-outline-info">Register</button>
     </div>
 </form>

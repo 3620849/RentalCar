@@ -3,6 +3,7 @@ package com.qualitest.demo.services;
 
 import com.google.common.collect.ImmutableList;
 import com.qualitest.demo.dao.UserDao;
+import com.qualitest.demo.dao.UserDataDao;
 import com.qualitest.demo.model.Role;
 import com.qualitest.demo.model.User;
 
@@ -26,6 +27,8 @@ public class UserService implements UserDetailsService {
     @Autowired
     private UserDao userDao;
     @Autowired
+    private UserDataDao userDataDao;
+    @Autowired
     PasswordEncoder passwordEncoder;
 
     @Override
@@ -41,5 +44,8 @@ public class UserService implements UserDetailsService {
     public void addNewUser(@NonNull User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userDao.addUser(user);
+        UserData userData = new UserData();
+        userData.setUser(userDao.findUserByName(user.getUsername()));
+        userDataDao.addUserData(userData);
     }
 }

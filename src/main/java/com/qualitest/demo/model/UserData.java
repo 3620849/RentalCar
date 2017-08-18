@@ -16,7 +16,7 @@ import java.util.List;
 @Setter
 @Entity
 public class UserData {
-
+    @GeneratedValue
     @Id
     private int id;
     private String userName;

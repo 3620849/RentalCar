@@ -1,21 +1,36 @@
 /**
  * Created by UA C on 16.07.2017.
  */
+
 var app = angular.module("mainApp",[]);
 app.controller("AppCtrl",function($scope,$http){
-
+    $scope.showLogForm=false;
+    $scope.registerForm={};
+    $scope.currentForm="lib/loginForm.html";
     $scope.arr ={};
-    $scope.user={isRegistered:false,
+    $scope.user={
+        isRegistered:false,
         token : -1
+    }
+    $scope.getRegisterForm = function(){
+        $scope.currentForm="lib/rform.html";
+        $scope.registerForm.name="SIGN UP";
+    }
+    $scope.getLoginForm = function(op){
+
+        $scope.currentForm="lib/loginForm.html";
+        $scope.registerForm.name="LOGIN";
+        openCloseRegform(op);
+    }
+    var openCloseRegform = function(op){
+        if(op)
+        $scope.showLogForm?$scope.showLogForm=false:$scope.showLogForm=true;
     }
     $scope.sendForm = function(user){$http.post("/getToken",user)
         .then(function(data, status, headers, config){
         $scope.user.token=data.data;
-
-            if(data.data!=-1){
-            $scope.user.isRegistered=true;}
             $scope.currentUser();
-
+            openCloseRegform(true);
             console.log(user);
     },function(error){console.log(error.data)})};
 
@@ -43,6 +58,7 @@ app.controller("AppCtrl",function($scope,$http){
 
     $scope.registerUser = function(user){$http.post("/register",user)
         .then(function(data, status, headers, config){
+            openCloseRegform(true);
         },function(error){console.log(error.data)})};
 
 
