@@ -1,17 +1,48 @@
-<form   name="loginForm" ng-submit="sendForm(user)" method="post">
-    <div class="form-group">
-        <div class="input-group">
-            <span class="input-group-addon bg-secondary" id="sizing-addon2">@</span>
-            <input type="text" class="form-control" placeholder="e-mail" name="mail" ng-model="user.username" >
-        </div>
-        <br>
-        <div class="input-group">
-            <input type="password" class="form-control" placeholder="password" name="password" ng-model="user.password" >
+<div id="loginForm" ng-controller = "loginCtrl" ng-show="showPopUpDialog" class="col-4 container" style="z-index: 2 ; position: absolute;left:25vw">
+    <div class="card">
+        <h4 class="card-header">{{registerForm.name}}
+            <button type="button" ng-click="openCloseRegform(true)" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </h4>
+
+        <div class="card-body">
+            <form   name="loginForm" ng-show="showLoginForm" ng-submit="sendForm(user)" method="post">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon bg-secondary" id="sizing-addon2">@</span>
+                        <input type="text" class="form-control" placeholder="e-mail" name="mail" ng-model="user.username" >
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <input type="password" class="form-control" placeholder="password" name="password" ng-model="user.password" >
                  <span class="input-group-btn">
                   <button class="btn btn-secondary" type="submit">Go!</button>
                 </span>
+                    </div>
+                    <br>
+                    <button type="button"  ng-click="getRegisterForm()" class="btn btn-outline-info">Register</button>
+                </div>
+            </form>
+
+            <form id="registerForm" ng-show="showRegisterForm" ng-submit="registerUser(user)">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon bg-secondary" id="sizing-addon2">@</span>
+                        <input type="text" class="form-control" placeholder="e-mail" name="mail" ng-model="user.username" >
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <input type="password" class="form-control" placeholder="password" name="password" ng-model="user.password" >
+                 <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="submit">Reg</button>
+                </span>
+                    </div>
+                    <br>
+                    <button type="button"  ng-click="getLoginForm(false)" class="btn btn-outline-info">Login</button>
+                </div>
+            </form>
+
         </div>
-        <br>
-        <button type="button"  ng-click="$parent.getRegisterForm()" class="btn btn-outline-info">Register</button>
     </div>
-</form>
+</div>

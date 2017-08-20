@@ -6,6 +6,8 @@ import com.qualitest.demo.model.User;
 import com.qualitest.demo.services.TokenAuthService;
 import com.qualitest.demo.services.TokenHandler;
 import com.qualitest.demo.services.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
@@ -21,6 +23,7 @@ import java.util.Optional;
 
 @RestController
 public class HiCtrl {
+    private final Logger LOGGER = LoggerFactory.getLogger(HiCtrl.class);
     @Autowired
     private UserDao userDao;
     @Autowired
@@ -38,6 +41,8 @@ public class HiCtrl {
             method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.TEXT_PLAIN_VALUE)
     public String getIndexPage(@RequestBody User loginUser) {
+        LOGGER.debug("/getToken : method getIndexPage user: "+ loginUser.getUsername());
+
         User savedUser = userDao.findUserByName(loginUser.getUsername());
         if(tokenHandler.checkMatchesPasswords(savedUser,loginUser)){
 
@@ -48,7 +53,7 @@ public class HiCtrl {
     }
     @RequestMapping(value = "/getCurrentUser", method = RequestMethod.GET)
     public User getCurrentUser(){
-
+        LOGGER.debug("/getCurrentUser : method getCurrentUser ");
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = null;
         try{
@@ -64,6 +69,7 @@ public class HiCtrl {
     }
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public void register(@RequestBody User user){
+        LOGGER.debug("/register : method register , user: "+user.getUsername());
         user.setAccountNonExpired(true);
         user.setCredentialsNonExpired(true);
         user.setAccountNonLocked(true);

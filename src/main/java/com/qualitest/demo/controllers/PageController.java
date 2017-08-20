@@ -4,6 +4,8 @@ import com.qualitest.demo.model.Role;
 import com.qualitest.demo.model.User;
 import com.qualitest.demo.model.UserAutority;
 import com.qualitest.demo.services.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
@@ -28,11 +30,11 @@ import static java.util.stream.Collectors.joining;
 @Controller
 public class PageController {
 
-
+    private final Logger LOGGER = LoggerFactory.getLogger(PageController.class);
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getIndexPage(Model model) {
-
+        LOGGER.debug("URL / getIndexPage method: getIndexPage");
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = null;
         try{
@@ -40,10 +42,12 @@ public class PageController {
         }catch (ClassCastException e){
              if (authentication.getPrincipal()=="anonymousUser"){
                  user=new User();
+                 user.setId(-1);
                  user.setUsername("anonymousUser");
                  user.grantRole(Role.ROLE_ANONYMOUS);
              }
         }
+        LOGGER.debug("URL / getIndexPage method: user defined as :" +user.getUsername()+" id: "+user.getId());
         model.addAttribute("username",user.getUsername());
         model.addAttribute("roles",user.getAuthorities().stream().map(s -> s.getAuthority()).collect(joining(",")));
         return "index";

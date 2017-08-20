@@ -9,23 +9,11 @@
 <ng-include src="'lib/navbar.html'"></ng-include>
 <div class="container-fluid">
 
-    <div id="loginForm" ng-show="showLogForm" class="col-4 container" style="z-index: 2 ; position: absolute;left:25vw">
-        <div class="card">
-            <h4 class="card-header">{{registerForm.name}}
-                <button type="button" ng-click="showLogForm=false" class="close" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </h4>
-
-             <div class="card-body">
-                 <ng-include src="currentForm"></ng-include>
-             </div>
-         </div>
-    </div>
+<login-pop-up></login-pop-up>
 
     <div class="row">
 
-        <main class="container col-5  ml-auto">
+        <main class="container col-5  ml-auto"">
             <div class="card bg-light  " >
                 <div class="card-header">Person</div>
                 <div class="card-body">
@@ -60,6 +48,9 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src=""lib/bootstrap-4.0.0-beta/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="js/loginCtrl.js"></script>
+<script src="js/loginPopUpDirective.js"></script>
+<script src="js/registerService.js"></script>
+<script src="js/userDataService.js"></script>
 
 
 </html>
