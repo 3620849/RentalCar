@@ -77,5 +77,6 @@ public class HiCtrl {
         user.grantRole(Role.ROLE_USER);
         userService.addNewUser(user);
         //development comment
+        //second development comment
     }
 }
