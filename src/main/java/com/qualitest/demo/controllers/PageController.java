@@ -34,7 +34,7 @@ public class PageController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getIndexPage(Model model) {
-        LOGGER.debug("URL / getIndexPage method: getIndexPage");
+        LOGGER.debug("URL / getAuthToken method: getAuthToken");
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = null;
         try{
@@ -47,7 +47,7 @@ public class PageController {
                  user.grantRole(Role.ROLE_ANONYMOUS);
              }
         }
-        LOGGER.debug("URL / getIndexPage method: user defined as :" +user.getUsername()+" id: "+user.getId());
+        LOGGER.debug("URL / getAuthToken method: user defined as :" +user.getUsername()+" id: "+user.getId());
         model.addAttribute("username",user.getUsername());
         model.addAttribute("roles",user.getAuthorities().stream().map(s -> s.getAuthority()).collect(joining(",")));
         return "index";
