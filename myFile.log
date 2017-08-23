@@ -1,0 +1,35 @@
+2017-08-20 14:22:03.495 ERROR 4980 --- [restartedMain] o.s.b.l.LoggingApplicationListener       : Cannot set level: ALL for 'org.hibernate'
+2017-08-20 14:22:03.797  INFO 4980 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 4980 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-20 14:22:03.798  INFO 4980 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-20 14:22:03.964  INFO 4980 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d495c17: startup date [Sun Aug 20 14:22:03 IDT 2017]; root of context hierarchy
+2017-08-20 14:22:05.749  INFO 4980 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-20 14:22:08.972  INFO 4980 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-20 14:22:08.995  INFO 4980 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-20 14:22:08.997  INFO 4980 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-20 14:22:09.265  INFO 4980 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-20 14:22:09.610  INFO 4980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-20 14:22:09.611  INFO 4980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-20 14:22:09.611  INFO 4980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-20 14:22:09.611  INFO 4980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-20 14:22:09.613  INFO 4980 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-20 14:22:09.614  INFO 4980 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-20 14:22:10.633  INFO 4980 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-20 14:22:10.664  INFO 4980 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-20 14:22:10.866  INFO 4980 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-20 14:22:10.869  INFO 4980 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-20 14:22:10.884  INFO 4980 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-20 14:22:11.518  INFO 4980 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-20 14:22:11.737  INFO 4980 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-20 14:22:12.092  WARN 4980 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-20 14:22:12.092  WARN 4980 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-20 14:22:12.517  INFO 4980 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-20 14:22:12.959  INFO 4980 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-20 14:22:14.011  INFO 4980 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65dbe666, org.springframework.security.web.context.SecurityContextPersistenceFilter@78efc4b2, org.springframework.security.web.header.HeaderWriterFilter@3b11e09e, org.springframework.security.web.authentication.logout.LogoutFilter@17b7a920, com.qualitest.demo.configurations.AdminFilter@22c80fbe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65b0e9e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72cdb1e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46b52995, org.springframework.security.web.session.SessionManagementFilter@16de9443, org.springframework.security.web.access.ExceptionTranslationFilter@a88e3ec, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61c1ecfe]
+2017-08-20 14:22:15.753  INFO 4980 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-20 14:22:15.830  INFO 4980 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-20 14:22:15.928  INFO 4980 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-20 14:22:15.936  INFO 4980 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 12.885 seconds (JVM running for 14.072)
+2017-08-20 14:22:54.956  INFO 4980 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-20 14:23:02.510  INFO 4980 --- [http-nio-8080-exec-7] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
