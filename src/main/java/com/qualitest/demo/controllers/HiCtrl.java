@@ -76,5 +76,6 @@ public class HiCtrl {
         user.setEnabled(true);
         user.grantRole(Role.ROLE_USER);
         userService.addNewUser(user);
+        //dummy
     }
 }
