@@ -1,5 +1,6 @@
 package com.qualitest.demo;
 
+import com.qualitest.demo.controllers.HiCtrl;
 import com.qualitest.demo.model.Role;
 import com.qualitest.demo.model.User;
 import com.qualitest.demo.services.TokenHandler;
@@ -25,6 +26,7 @@ import java.time.LocalDateTime;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RentalCarApplicationTests {
+
 
 	@Test
 	public void contextLoads() {

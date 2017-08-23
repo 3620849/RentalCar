@@ -6,6 +6,7 @@ import com.qualitest.demo.model.User;
 import com.qualitest.demo.services.TokenAuthService;
 import com.qualitest.demo.services.TokenHandler;
 import com.qualitest.demo.services.UserService;
+import lombok.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,16 +40,15 @@ public class HiCtrl {
 
     @RequestMapping(value = "/getToken",
             method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.TEXT_PLAIN_VALUE)
-    public String getIndexPage(@RequestBody User loginUser) {
-        LOGGER.debug("/getToken : method getIndexPage user: "+ loginUser.getUsername());
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.TEXT_PLAIN_VALUE)
+    public String getAuthToken(@RequestBody User loginUser){
 
+        LOGGER.debug("/getToken : method getAuthToken user: "+ loginUser.getUsername());
         User savedUser = userDao.findUserByName(loginUser.getUsername());
         if(tokenHandler.checkMatchesPasswords(savedUser,loginUser)){
-
             return tokenHandler.generateTokenId(savedUser.getId() , LocalDateTime.now().plusHours(1));
         };
-
         return "-1";
     }
     @RequestMapping(value = "/getCurrentUser", method = RequestMethod.GET)
