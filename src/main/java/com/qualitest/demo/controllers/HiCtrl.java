@@ -76,6 +76,8 @@ public class HiCtrl {
         user.setEnabled(true);
         user.grantRole(Role.ROLE_USER);
         userService.addNewUser(user);
+
+        //another development commit from master
         //development comment
         //second development comment
         //second coment not work without this
