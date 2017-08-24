@@ -42,13 +42,17 @@ public class HiCtrl {
             method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.TEXT_PLAIN_VALUE)
-    public String getAuthToken(@RequestBody User loginUser){
-
+        public String getAuthToken(@RequestBody User loginUser){
         LOGGER.debug("/getToken : method getAuthToken user: "+ loginUser.getUsername());
-        User savedUser = userDao.findUserByName(loginUser.getUsername());
-        if(tokenHandler.checkMatchesPasswords(savedUser,loginUser)){
-            return tokenHandler.generateTokenId(savedUser.getId() , LocalDateTime.now().plusHours(1));
-        };
+        User savedUser = null;
+        try {
+            savedUser = userDao.findUserByName(loginUser.getUsername());
+            if(tokenHandler.checkMatchesPasswords(savedUser,loginUser)){
+                return tokenHandler.generateTokenId(savedUser.getId() , LocalDateTime.now().plusHours(1));
+            };
+        } catch (NullPointerException e){
+            return "-1";
+        }
         return "-1";
     }
     @RequestMapping(value = "/getCurrentUser", method = RequestMethod.GET)
