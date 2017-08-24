@@ -31,7 +31,7 @@ public class UserDataController {
     private UserService userService;
     @Autowired
     private CarService carService;
-
+    @PreAuthorize("hasRole('ROLE_ADMIN') or principal.id == #id")
     @RequestMapping(value = "/getUserInfo/{id}", method = RequestMethod.GET)
     public User getUserInfo (@PathVariable("id") int id){
         LOGGER.debug("URL /getUserInfo/{id} method:getUserInfo attribute id is: "+id);
@@ -44,6 +44,7 @@ public class UserDataController {
         LOGGER.debug("URL /getUserData/{id} method:getUserData attribute id is: "+id);
         return userDataService.getUserDataById(id);
     }
+    @PreAuthorize("hasRole('ROLE_ADMIN') or principal.id == #id")
     @RequestMapping(value = "/getCarList/{id}", method = RequestMethod.GET)
     public List<Car> getCarList (@PathVariable("id") int id){
         LOGGER.debug("URL /getCarList/{id} method:getCarList attribute id is: "+id);

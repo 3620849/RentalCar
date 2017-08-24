@@ -20,4 +20,8 @@ public class CarDao {
     public List<Car> getUsedCarListByUserId (@NonNull int id){
         return em.createQuery("SELECT ud.carInUse from UserData ud where ud.user ='"+id+"'",Car.class).getResultList();
     }
+
+    public List<Car> getAllCars() {
+        return em.createQuery("SELECT c from Car c",Car.class).getResultList();
+    }
 }

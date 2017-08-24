@@ -33,21 +33,15 @@ public class HiCtrl {
     @Autowired
     UserService userService;
 
-    @RequestMapping(value = "/hi", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
-    public User hello() {
-        return userDao.findUserByName("123");
-    }
-
     @RequestMapping(value = "/getToken",
             method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.TEXT_PLAIN_VALUE)
         public String getAuthToken(@RequestBody User loginUser){
         LOGGER.debug("/getToken : method getAuthToken user: "+ loginUser.getUsername());
-        User savedUser = null;
+        User savedUser;
         try {
-            savedUser = userDao.findUserByName(loginUser.getUsername());
+            savedUser = userService.findUserByName(loginUser).get();
             if(tokenHandler.checkMatchesPasswords(savedUser,loginUser)){
                 return tokenHandler.generateTokenId(savedUser.getId() , LocalDateTime.now().plusHours(1));
             };
@@ -70,7 +64,7 @@ public class HiCtrl {
                 user.grantRole(Role.ROLE_ANONYMOUS);
             }
         }
-        return new ResponseEntity<User>(user,HttpStatus.OK);
+        return new ResponseEntity<>(user,HttpStatus.OK);
     }
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public void register(@RequestBody @NonNull User user){

@@ -29,12 +29,15 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String user) throws UsernameNotFoundException {
-        //here shoud be method wich retrieve user from db and mathc it
+        //here should be method wich retrieve user from db and mathc it
         return userDao.findUserByName(user);
     }
 
     public  Optional<User> findById(int id) {
        return userDao.findById(id);
+    }
+    public  Optional<User> findUserByName(User  user) {
+        return Optional.ofNullable(userDao.findUserByName(user.getUsername()));
     }
 
     public void addNewUser(@NonNull User user) {

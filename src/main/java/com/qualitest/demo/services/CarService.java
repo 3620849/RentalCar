@@ -15,8 +15,11 @@ import java.util.List;
 public class CarService {
     @Autowired
     CarDao carDao;
+    public List<Car>getAllCarsList (){
+        return carDao.getAllCars();
+    }
 
-    public List<Car>getUsedCarListByUserId (@NonNull int id){
+    public List<Car>getUsedCarListByUserId (int id){
         return carDao.getUsedCarListByUserId(id);
     }
 

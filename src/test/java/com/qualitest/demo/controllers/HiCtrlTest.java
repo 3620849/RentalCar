@@ -12,6 +12,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.test.context.ActiveProfiles;
+
+import java.util.Optional;
+
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.anyObject;
@@ -38,15 +41,6 @@ public class HiCtrlTest {
     public ExpectedException thrown = ExpectedException.none();
 
     @Test
-    public void testHello() throws Exception {
-        //rules to mock object
-        // when(userDao.findUserByName("123")).thenReturn(new User());
-        hiCtrl.hello();
-        //check if we call findUserByName("123");
-        verify(userDao).findUserByName("123");
-    }
-
-    @Test
     public void getAuthToken() throws Exception {
        //if token handler called
         hiCtrl.getAuthToken(new User());
@@ -55,10 +49,8 @@ public class HiCtrlTest {
 
     @Test
     public void testGetAuthToken1() throws Exception {
-        //if getAuthToken accep not null if nulltoken -1
         thrown.expect(NullPointerException.class);
         hiCtrl.getAuthToken(null);
-        //if 2 users different return -1
     }
     @Test
     public void testGetAuthToken2() throws Exception {
@@ -66,7 +58,7 @@ public class HiCtrlTest {
         User user123 = new User();
         user123.setUsername("123");
         user123.setPassword("123");
-        when(userDao.findUserByName("123")).thenReturn(user123);
+        when(userService.findUserByName(user123)).thenReturn(Optional.ofNullable(user123));
         when(tokenHandler.checkMatchesPasswords(user123,user123)).thenReturn(true);
         when(tokenHandler.generateTokenId(anyInt(),anyObject())).thenReturn("someToken");
         String res = hiCtrl.getAuthToken(user123);
