@@ -1,24 +1,25 @@
 package com.qualitest.demo.controllers;
 
 import com.qualitest.demo.dao.UserDao;
+import com.qualitest.demo.exceptions.ErrorResponse;
 import com.qualitest.demo.model.Role;
 import com.qualitest.demo.model.User;
-import com.qualitest.demo.services.TokenAuthService;
 import com.qualitest.demo.services.TokenHandler;
 import com.qualitest.demo.services.UserService;
 import lombok.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
-import java.util.Optional;
 
-/**
+/*
  * Created by UA C on 23.07.2017.
  */
 
@@ -56,7 +57,7 @@ public class HiCtrl {
         return "-1";
     }
     @RequestMapping(value = "/getCurrentUser", method = RequestMethod.GET)
-    public User getCurrentUser(){
+    public ResponseEntity<User> getCurrentUser(){
         LOGGER.debug("/getCurrentUser : method getCurrentUser ");
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = null;
@@ -69,10 +70,10 @@ public class HiCtrl {
                 user.grantRole(Role.ROLE_ANONYMOUS);
             }
         }
-        return user;
+        return new ResponseEntity<User>(user,HttpStatus.OK);
     }
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public void register(@RequestBody User user){
+    public void register(@RequestBody @NonNull User user){
         LOGGER.debug("/register : method register , user: "+user.getUsername());
         user.setAccountNonExpired(true);
         user.setCredentialsNonExpired(true);
@@ -80,5 +81,12 @@ public class HiCtrl {
         user.setEnabled(true);
         user.grantRole(Role.ROLE_USER);
         userService.addNewUser(user);
+    }
+    @ExceptionHandler(NullPointerException.class)
+    public ResponseEntity<ErrorResponse> exceptionHandling (Exception e){
+        ErrorResponse error = new ErrorResponse(e);
+        error.setMessage(e.getMessage());
+        return new ResponseEntity<>(error, error.getHttpStatus());
+
     }
 }

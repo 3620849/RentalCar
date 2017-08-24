@@ -7,7 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Collection;
 
-/**
+/*
  * Created by UA C on 12.08.2017.
  */
 public class AdminAuth implements Authentication {

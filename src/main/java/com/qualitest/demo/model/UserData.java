@@ -1,15 +1,12 @@
 package com.qualitest.demo.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
 import java.util.List;
 
-/**
+/*
  * Created by UA C on 14.08.2017.
  */
 @Getter

@@ -1,25 +1,21 @@
 package com.qualitest.demo.services;
 
 
-import com.google.common.collect.ImmutableList;
 import com.qualitest.demo.dao.UserDao;
 import com.qualitest.demo.dao.UserDataDao;
-import com.qualitest.demo.model.Role;
 import com.qualitest.demo.model.User;
-
 import com.qualitest.demo.model.UserData;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-/**
+/*
  * Created by UA C on 24.07.2017.
  */
 @Service
@@ -37,7 +33,7 @@ public class UserService implements UserDetailsService {
         return userDao.findUserByName(user);
     }
 
-    public  Optional<User> findById(@NonNull int id) {
+    public  Optional<User> findById(int id) {
        return userDao.findById(id);
     }
 

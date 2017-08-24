@@ -3,7 +3,7 @@ package com.qualitest.demo.controllers;
 import com.qualitest.demo.dao.UserDao;
 import com.qualitest.demo.model.User;
 import com.qualitest.demo.services.TokenHandler;
-import org.junit.Before;
+import com.qualitest.demo.services.UserService;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -11,19 +11,18 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-
-import java.util.Optional;
-
+import org.springframework.test.context.ActiveProfiles;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-/**
+/*
  * Created by UA C on 23.08.2017.
  */
 //add mokito
+@ActiveProfiles("test")
 @RunWith(MockitoJUnitRunner.class)
 public class HiCtrlTest {
     @InjectMocks
@@ -31,7 +30,10 @@ public class HiCtrlTest {
     @Mock
     private UserDao userDao;
     @Mock
+    private UserService userService;
+    @Mock
     private TokenHandler tokenHandler;
+
     @Rule
     public ExpectedException thrown = ExpectedException.none();
 
@@ -39,7 +41,7 @@ public class HiCtrlTest {
     public void testHello() throws Exception {
         //rules to mock object
         // when(userDao.findUserByName("123")).thenReturn(new User());
-        User hello = hiCtrl.hello();
+        hiCtrl.hello();
         //check if we call findUserByName("123");
         verify(userDao).findUserByName("123");
     }
@@ -69,5 +71,22 @@ public class HiCtrlTest {
         when(tokenHandler.generateTokenId(anyInt(),anyObject())).thenReturn("someToken");
         String res = hiCtrl.getAuthToken(user123);
         assertEquals("someToken",res);
+    }
+
+    @Test
+    public void testRegister() throws Exception {
+        thrown.expect(NullPointerException.class);
+        hiCtrl.register(null);
+    }
+    @Test
+    public void testRegister2() throws Exception {
+        hiCtrl.register(new User());
+        verify(userService).addNewUser(anyObject());
+    }
+
+
+    @Test
+    public void testGetCurrentUser() throws Exception {
+
     }
 }

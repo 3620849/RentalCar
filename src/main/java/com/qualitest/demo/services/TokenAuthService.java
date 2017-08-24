@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
-/**
+/*
  * Created by UA C on 12.08.2017.
  */
 @Component

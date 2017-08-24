@@ -1,17 +1,12 @@
 package com.qualitest.demo.model;
 
-
 import lombok.*;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
-
 import javax.persistence.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
-/**
+/*
  * Created by UA C on 24.07.2017.
  */
 @Data
@@ -38,7 +33,7 @@ public  class User implements UserDetails {
     //helper method to set roles for this user
     public void grantRole(Role role) {
         if (authorities == null) {
-            authorities = new ArrayList<UserAutority>();
+            authorities = new ArrayList<>();
         }
         authorities.add(new UserAutority(this,role.name()));
     }

@@ -735,3 +735,933 @@ java.lang.NullPointerException: name
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_51]
 
 2017-08-23 19:27:07.623  WARN 8384 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation
+2017-08-24 13:15:22.778  INFO 1376 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 1376 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 13:15:22.781  INFO 1376 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 13:15:22.987  INFO 1376 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29829665: startup date [Thu Aug 24 13:15:22 IDT 2017]; root of context hierarchy
+2017-08-24 13:15:25.137  INFO 1376 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 13:15:27.538  INFO 1376 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 13:15:27.563  INFO 1376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 13:15:27.565  INFO 1376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 13:15:27.824  INFO 1376 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 13:15:27.824  INFO 1376 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4858 ms
+2017-08-24 13:15:28.150  INFO 1376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 13:15:28.151  INFO 1376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 13:15:28.151  INFO 1376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 13:15:28.152  INFO 1376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 13:15:28.154  INFO 1376 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 13:15:28.155  INFO 1376 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 13:15:29.090  INFO 1376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 13:15:29.112  INFO 1376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 13:15:29.249  INFO 1376 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 13:15:29.252  INFO 1376 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 13:15:29.254  INFO 1376 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 13:15:29.547  INFO 1376 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 13:15:29.771  INFO 1376 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 13:15:30.151  WARN 1376 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 13:15:30.151  WARN 1376 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 13:15:30.563  INFO 1376 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 13:15:30.981  INFO 1376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 13:15:31.904  INFO 1376 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7160e097, org.springframework.security.web.context.SecurityContextPersistenceFilter@6891b7a0, org.springframework.security.web.header.HeaderWriterFilter@53d11126, org.springframework.security.web.authentication.logout.LogoutFilter@7aca3896, com.qualitest.demo.configurations.AdminFilter@1bf84b9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e48adf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4cbfd2f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c0d6861, org.springframework.security.web.session.SessionManagementFilter@30401576, org.springframework.security.web.access.ExceptionTranslationFilter@2f088e9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2feabd3f]
+2017-08-24 13:15:32.397  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29829665: startup date [Thu Aug 24 13:15:22 IDT 2017]; root of context hierarchy
+2017-08-24 13:15:32.551  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 13:15:32.553  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 13:15:32.553  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 13:15:32.554  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 13:15:32.554  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 13:15:32.559  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 13:15:32.559  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 13:15:32.560  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 13:15:32.563  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 13:15:32.564  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 13:15:32.744  INFO 1376 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 13:15:32.744  INFO 1376 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 13:15:32.833  INFO 1376 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 13:15:33.336  INFO 1376 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 13:15:33.665  INFO 1376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 13:15:33.738  INFO 1376 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 13:15:33.831  INFO 1376 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 13:15:33.838  INFO 1376 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.797 seconds (JVM running for 12.919)
+2017-08-24 13:16:10.428  INFO 1376 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 13:16:10.428  INFO 1376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 13:16:10.459  INFO 1376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2017-08-24 13:16:10.702 DEBUG 1376 --- [http-nio-8080-exec-1] com.qualitest.demo.controllers.HiCtrl    : /getToken : method getAuthToken user: null
+2017-08-24 13:16:53.184 DEBUG 1376 --- [http-nio-8080-exec-2] com.qualitest.demo.controllers.HiCtrl    : /getCurrentUser : method getCurrentUser 
+2017-08-24 13:17:22.843 DEBUG 1376 --- [http-nio-8080-exec-3] c.q.demo.controllers.PageController      : URL / getAuthToken method: getAuthToken
+2017-08-24 13:17:22.843 DEBUG 1376 --- [http-nio-8080-exec-3] c.q.demo.controllers.PageController      : URL / getAuthToken method: user defined as :anonymousUser id: -1
+2017-08-24 13:17:33.097 DEBUG 1376 --- [http-nio-8080-exec-10] com.qualitest.demo.controllers.HiCtrl    : /getToken : method getAuthToken user: 1
+2017-08-24 13:17:33.111  INFO 1376 --- [http-nio-8080-exec-10] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-08-24 13:17:34.287 DEBUG 1376 --- [http-nio-8080-exec-1] com.qualitest.demo.controllers.HiCtrl    : /getCurrentUser : method getCurrentUser 
+2017-08-24 13:17:34.364 DEBUG 1376 --- [http-nio-8080-exec-8] c.q.demo.controllers.UserDataController  : URL /getUserData/{id} method:getUserData attribute id is: 1
+2017-08-24 14:28:24.971  INFO 8472 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 8472 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 14:28:24.972  INFO 8472 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 14:28:25.072  INFO 8472 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61e45fbe: startup date [Thu Aug 24 14:28:25 IDT 2017]; root of context hierarchy
+2017-08-24 14:28:27.248  INFO 8472 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 14:28:29.687  INFO 8472 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 14:28:29.711  INFO 8472 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 14:28:29.714  INFO 8472 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 14:28:29.951  INFO 8472 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 14:28:29.951  INFO 8472 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4885 ms
+2017-08-24 14:28:30.323  INFO 8472 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 14:28:30.324  INFO 8472 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 14:28:30.324  INFO 8472 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 14:28:30.324  INFO 8472 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 14:28:30.326  INFO 8472 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 14:28:30.327  INFO 8472 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 14:28:31.348  INFO 8472 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 14:28:31.379  INFO 8472 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 14:28:31.512  INFO 8472 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 14:28:31.514  INFO 8472 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 14:28:31.516  INFO 8472 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 14:28:31.738  INFO 8472 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 14:28:31.918  INFO 8472 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 14:28:32.237  WARN 8472 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 14:28:32.237  WARN 8472 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 14:28:32.677  INFO 8472 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 14:28:33.129  INFO 8472 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 14:28:33.996  INFO 8472 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@709e443f, org.springframework.security.web.context.SecurityContextPersistenceFilter@24c8c00, org.springframework.security.web.header.HeaderWriterFilter@4578a705, org.springframework.security.web.authentication.logout.LogoutFilter@14e70e53, com.qualitest.demo.configurations.AdminFilter@2a89c955, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6797ac63, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b57b474, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5052a098, org.springframework.security.web.session.SessionManagementFilter@78ae968b, org.springframework.security.web.access.ExceptionTranslationFilter@5ec4498d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c546653]
+2017-08-24 14:28:34.478  INFO 8472 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61e45fbe: startup date [Thu Aug 24 14:28:25 IDT 2017]; root of context hierarchy
+2017-08-24 14:28:34.617  INFO 8472 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 14:28:34.618  INFO 8472 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 14:28:34.619  INFO 8472 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 14:28:34.619  INFO 8472 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 14:28:34.620  INFO 8472 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 14:28:34.624  INFO 8472 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 14:28:34.625  INFO 8472 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 14:28:34.625  INFO 8472 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 14:28:34.629  INFO 8472 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 14:28:34.629  INFO 8472 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 14:28:34.791  INFO 8472 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:28:34.791  INFO 8472 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:28:34.875  INFO 8472 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:28:35.345  INFO 8472 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 14:28:35.669  INFO 8472 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 14:28:35.789  INFO 8472 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 14:28:35.917  INFO 8472 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 14:28:35.925  INFO 8472 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.674 seconds (JVM running for 12.661)
+2017-08-24 14:29:00.508  INFO 8472 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 14:29:00.509  INFO 8472 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 14:29:00.534  INFO 8472 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2017-08-24 14:29:00.678  WARN 8472 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported
+2017-08-24 14:30:24.698 DEBUG 8472 --- [http-nio-8080-exec-6] com.qualitest.demo.controllers.HiCtrl    : /register : method register , user: null
+2017-08-24 14:30:24.706 ERROR 8472 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.encode(BCryptPasswordEncoder.java:80) ~[spring-security-core-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at com.qualitest.demo.services.UserService.addNewUser(UserService.java:45) ~[classes/:na]
+	at com.qualitest.demo.controllers.HiCtrl.register(HiCtrl.java:84) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_51]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at com.qualitest.demo.configurations.AdminFilter.doFilter(AdminFilter.java:38) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_51]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_51]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_51]
+
+2017-08-24 14:45:02.635  INFO 5396 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 5396 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 14:45:02.637  INFO 5396 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 14:45:02.805  INFO 5396 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29829665: startup date [Thu Aug 24 14:45:02 IDT 2017]; root of context hierarchy
+2017-08-24 14:45:04.705  INFO 5396 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 14:45:07.202  INFO 5396 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 14:45:07.225  INFO 5396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 14:45:07.227  INFO 5396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 14:45:07.443  INFO 5396 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 14:45:07.444  INFO 5396 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4644 ms
+2017-08-24 14:45:07.777  INFO 5396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 14:45:07.778  INFO 5396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 14:45:07.778  INFO 5396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 14:45:07.779  INFO 5396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 14:45:07.780  INFO 5396 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 14:45:07.781  INFO 5396 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 14:45:08.684  INFO 5396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 14:45:08.710  INFO 5396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 14:45:08.804  INFO 5396 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 14:45:08.807  INFO 5396 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 14:45:08.810  INFO 5396 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 14:45:09.033  INFO 5396 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 14:45:09.230  INFO 5396 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 14:45:09.567  WARN 5396 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 14:45:09.567  WARN 5396 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 14:45:09.999  INFO 5396 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 14:45:10.470  INFO 5396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 14:45:11.404  INFO 5396 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bf84b9e, org.springframework.security.web.context.SecurityContextPersistenceFilter@58caf461, org.springframework.security.web.header.HeaderWriterFilter@afc1408, org.springframework.security.web.authentication.logout.LogoutFilter@a2f78a7, com.qualitest.demo.configurations.AdminFilter@3c0d6861, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d78567, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59109b22, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b2e7ad1, org.springframework.security.web.session.SessionManagementFilter@69869eb1, org.springframework.security.web.access.ExceptionTranslationFilter@4f8362b9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@675814e4]
+2017-08-24 14:45:11.879  INFO 5396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29829665: startup date [Thu Aug 24 14:45:02 IDT 2017]; root of context hierarchy
+2017-08-24 14:45:12.037  INFO 5396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 14:45:12.039  INFO 5396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 14:45:12.040  INFO 5396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 14:45:12.040  INFO 5396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 14:45:12.041  INFO 5396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 14:45:12.045  INFO 5396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 14:45:12.046  INFO 5396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 14:45:12.047  INFO 5396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 14:45:12.050  INFO 5396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 14:45:12.051  INFO 5396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 14:45:12.280  INFO 5396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:45:12.281  INFO 5396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:45:12.364  INFO 5396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:45:12.805  INFO 5396 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 14:45:13.095  INFO 5396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 14:45:13.181  INFO 5396 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 14:45:13.273  INFO 5396 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 14:45:13.281  INFO 5396 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.357 seconds (JVM running for 12.32)
+2017-08-24 14:45:32.056  INFO 5396 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 14:45:32.057  INFO 5396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 14:45:32.083  INFO 5396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2017-08-24 14:45:32.370 DEBUG 5396 --- [http-nio-8080-exec-1] com.qualitest.demo.controllers.HiCtrl    : /register : method register , user: null
+2017-08-24 14:45:32.428  WARN 5396 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.NullPointerException
+2017-08-24 14:46:53.413  INFO 9976 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 9976 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 14:46:53.415  INFO 9976 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 14:46:53.560  INFO 9976 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28222198: startup date [Thu Aug 24 14:46:53 IDT 2017]; root of context hierarchy
+2017-08-24 14:46:55.142  INFO 9976 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 14:46:57.797  INFO 9976 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 14:46:57.817  INFO 9976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 14:46:57.819  INFO 9976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 14:46:58.023  INFO 9976 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 14:46:58.023  INFO 9976 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4468 ms
+2017-08-24 14:46:58.328  INFO 9976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 14:46:58.329  INFO 9976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 14:46:58.330  INFO 9976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 14:46:58.330  INFO 9976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 14:46:58.331  INFO 9976 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 14:46:58.332  INFO 9976 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 14:46:59.223  INFO 9976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 14:46:59.245  INFO 9976 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 14:46:59.368  INFO 9976 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 14:46:59.370  INFO 9976 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 14:46:59.372  INFO 9976 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 14:46:59.675  INFO 9976 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 14:46:59.850  INFO 9976 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 14:47:00.142  WARN 9976 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 14:47:00.142  WARN 9976 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 14:47:00.516  INFO 9976 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 14:47:01.033  INFO 9976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 14:47:01.908  INFO 9976 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40cb768, org.springframework.security.web.context.SecurityContextPersistenceFilter@7644c1f6, org.springframework.security.web.header.HeaderWriterFilter@5c065acb, org.springframework.security.web.authentication.logout.LogoutFilter@1d5c53dc, com.qualitest.demo.configurations.AdminFilter@6740d272, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@99bb00, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2dfd7209, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b9959b3, org.springframework.security.web.session.SessionManagementFilter@3d3dbdc0, org.springframework.security.web.access.ExceptionTranslationFilter@6c82451b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@39b3b72a]
+2017-08-24 14:47:02.338  INFO 9976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28222198: startup date [Thu Aug 24 14:46:53 IDT 2017]; root of context hierarchy
+2017-08-24 14:47:02.463  INFO 9976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 14:47:02.465  INFO 9976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 14:47:02.465  INFO 9976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 14:47:02.465  INFO 9976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 14:47:02.466  INFO 9976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 14:47:02.470  INFO 9976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 14:47:02.470  INFO 9976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 14:47:02.471  INFO 9976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 14:47:02.474  INFO 9976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 14:47:02.477  INFO 9976 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 14:47:02.625  INFO 9976 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:47:02.626  INFO 9976 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:47:02.708  INFO 9976 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:47:03.123  INFO 9976 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 14:47:03.424  INFO 9976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 14:47:03.500  INFO 9976 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 14:47:03.580  INFO 9976 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 14:47:03.587  INFO 9976 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.008 seconds (JVM running for 11.967)
+2017-08-24 14:47:10.806  INFO 9976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 14:47:10.807  INFO 9976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 14:47:10.836  INFO 9976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2017-08-24 14:47:11.148 DEBUG 9976 --- [http-nio-8080-exec-1] com.qualitest.demo.controllers.HiCtrl    : /register : method register , user: null
+2017-08-24 14:47:11.161  WARN 9976 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.NullPointerException
+2017-08-24 14:47:41.169 DEBUG 9976 --- [http-nio-8080-exec-2] com.qualitest.demo.controllers.HiCtrl    : /register : method register , user: null
+2017-08-24 14:47:41.174  WARN 9976 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.NullPointerException
+2017-08-24 14:48:50.756  INFO 7980 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 7980 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 14:48:50.758  INFO 7980 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 14:48:50.903  INFO 7980 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28222198: startup date [Thu Aug 24 14:48:50 IDT 2017]; root of context hierarchy
+2017-08-24 14:48:53.035  INFO 7980 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 14:48:55.268  INFO 7980 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 14:48:55.291  INFO 7980 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 14:48:55.293  INFO 7980 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 14:48:55.498  INFO 7980 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 14:48:55.499  INFO 7980 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4601 ms
+2017-08-24 14:48:55.801  INFO 7980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 14:48:55.802  INFO 7980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 14:48:55.803  INFO 7980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 14:48:55.803  INFO 7980 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 14:48:55.805  INFO 7980 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 14:48:55.806  INFO 7980 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 14:48:56.753  INFO 7980 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 14:48:56.784  INFO 7980 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 14:48:56.931  INFO 7980 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 14:48:56.934  INFO 7980 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 14:48:56.937  INFO 7980 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 14:48:57.232  INFO 7980 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 14:48:57.427  INFO 7980 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 14:48:57.744  WARN 7980 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 14:48:57.745  WARN 7980 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 14:48:58.106  INFO 7980 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 14:48:58.630  INFO 7980 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 14:48:59.469  INFO 7980 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73db8d28, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d7311e6, org.springframework.security.web.header.HeaderWriterFilter@52c5286f, org.springframework.security.web.authentication.logout.LogoutFilter@767a466c, com.qualitest.demo.configurations.AdminFilter@40cb768, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2647b143, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ae2639d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6740d272, org.springframework.security.web.session.SessionManagementFilter@23e30deb, org.springframework.security.web.access.ExceptionTranslationFilter@765fab4b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3769abe6]
+2017-08-24 14:48:59.966  INFO 7980 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28222198: startup date [Thu Aug 24 14:48:50 IDT 2017]; root of context hierarchy
+2017-08-24 14:49:00.096  INFO 7980 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 14:49:00.097  INFO 7980 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 14:49:00.097  INFO 7980 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 14:49:00.098  INFO 7980 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 14:49:00.098  INFO 7980 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 14:49:00.102  INFO 7980 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 14:49:00.103  INFO 7980 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 14:49:00.104  INFO 7980 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 14:49:00.107  INFO 7980 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 14:49:00.107  INFO 7980 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 14:49:00.254  INFO 7980 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:49:00.255  INFO 7980 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:49:00.341  INFO 7980 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:49:00.787  INFO 7980 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 14:49:01.063  INFO 7980 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 14:49:01.137  INFO 7980 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 14:49:01.238  INFO 7980 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 14:49:01.248  INFO 7980 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.012 seconds (JVM running for 11.928)
+2017-08-24 14:49:06.165  INFO 7980 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 14:49:06.166  INFO 7980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 14:49:06.202  INFO 7980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2017-08-24 14:49:06.474 DEBUG 7980 --- [http-nio-8080-exec-1] com.qualitest.demo.controllers.HiCtrl    : /register : method register , user: null
+2017-08-24 14:49:06.482  WARN 7980 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.NullPointerException
+2017-08-24 14:49:46.064  INFO 4224 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 4224 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 14:49:46.068  INFO 4224 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 14:49:46.398  INFO 4224 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@42de8ac6: startup date [Thu Aug 24 14:49:46 IDT 2017]; root of context hierarchy
+2017-08-24 14:49:48.468  INFO 4224 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 14:49:50.852  INFO 4224 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 14:49:50.872  INFO 4224 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 14:49:50.874  INFO 4224 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 14:49:51.063  INFO 4224 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 14:49:51.063  INFO 4224 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4670 ms
+2017-08-24 14:49:51.401  INFO 4224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 14:49:51.402  INFO 4224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 14:49:51.403  INFO 4224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 14:49:51.403  INFO 4224 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 14:49:51.405  INFO 4224 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 14:49:51.405  INFO 4224 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 14:49:52.306  INFO 4224 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 14:49:52.328  INFO 4224 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 14:49:52.440  INFO 4224 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 14:49:52.442  INFO 4224 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 14:49:52.445  INFO 4224 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 14:49:52.714  INFO 4224 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 14:49:52.916  INFO 4224 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 14:49:53.260  WARN 4224 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 14:49:53.261  WARN 4224 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 14:49:53.636  INFO 4224 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 14:49:54.053  INFO 4224 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 14:49:54.899  INFO 4224 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9fc1ecc, org.springframework.security.web.context.SecurityContextPersistenceFilter@20262752, org.springframework.security.web.header.HeaderWriterFilter@497ff7c6, org.springframework.security.web.authentication.logout.LogoutFilter@2d73afdb, com.qualitest.demo.configurations.AdminFilter@1c792c16, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@477ced26, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1670dce0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fbf5da4, org.springframework.security.web.session.SessionManagementFilter@35918e52, org.springframework.security.web.access.ExceptionTranslationFilter@a50b0bf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@459d7585]
+2017-08-24 14:49:55.334  INFO 4224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@42de8ac6: startup date [Thu Aug 24 14:49:46 IDT 2017]; root of context hierarchy
+2017-08-24 14:49:55.447  INFO 4224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 14:49:55.449  INFO 4224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 14:49:55.449  INFO 4224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 14:49:55.450  INFO 4224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 14:49:55.451  INFO 4224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 14:49:55.454  INFO 4224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 14:49:55.455  INFO 4224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 14:49:55.455  INFO 4224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 14:49:55.458  INFO 4224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 14:49:55.459  INFO 4224 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 14:49:55.780  INFO 4224 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:49:55.781  INFO 4224 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:49:55.851  INFO 4224 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 14:49:56.292  INFO 4224 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 14:49:56.614  INFO 4224 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 14:49:56.681  INFO 4224 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 14:49:56.767  INFO 4224 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 14:49:56.775  INFO 4224 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.312 seconds (JVM running for 12.195)
+2017-08-24 14:50:04.648  INFO 4224 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 14:50:04.648  INFO 4224 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 14:50:04.675  INFO 4224 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2017-08-24 14:50:04.982 DEBUG 4224 --- [http-nio-8080-exec-1] com.qualitest.demo.controllers.HiCtrl    : /register : method register , user: null
+2017-08-24 14:50:04.992  WARN 4224 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.NullPointerException
+2017-08-24 15:04:15.543  INFO 9752 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 9752 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 15:04:15.545  INFO 9752 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 15:04:15.737  INFO 9752 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29829665: startup date [Thu Aug 24 15:04:15 IDT 2017]; root of context hierarchy
+2017-08-24 15:04:18.054  INFO 9752 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 15:04:20.246  INFO 9752 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 15:04:20.267  INFO 9752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 15:04:20.269  INFO 9752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 15:04:20.476  INFO 9752 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 15:04:20.476  INFO 9752 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4769 ms
+2017-08-24 15:04:20.788  INFO 9752 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 15:04:20.789  INFO 9752 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 15:04:20.789  INFO 9752 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 15:04:20.790  INFO 9752 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 15:04:20.792  INFO 9752 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 15:04:20.792  INFO 9752 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 15:04:21.696  INFO 9752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 15:04:21.724  INFO 9752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 15:04:21.821  INFO 9752 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 15:04:21.823  INFO 9752 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 15:04:21.825  INFO 9752 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 15:04:22.095  INFO 9752 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 15:04:22.276  INFO 9752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 15:04:22.597  WARN 9752 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 15:04:22.597  WARN 9752 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 15:04:22.976  INFO 9752 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 15:04:23.487  INFO 9752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 15:04:24.449  INFO 9752 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c0d6861, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e48adf, org.springframework.security.web.header.HeaderWriterFilter@199bfb97, org.springframework.security.web.authentication.logout.LogoutFilter@7f2859e0, com.qualitest.demo.configurations.AdminFilter@2b2e7ad1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@611e1eea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56a0250b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d3c537b, org.springframework.security.web.session.SessionManagementFilter@7e9fe5a9, org.springframework.security.web.access.ExceptionTranslationFilter@15e983af, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@24c9c772]
+2017-08-24 15:04:24.887  INFO 9752 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29829665: startup date [Thu Aug 24 15:04:15 IDT 2017]; root of context hierarchy
+2017-08-24 15:04:25.207  INFO 9752 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 15:04:25.208  INFO 9752 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 15:04:25.208  INFO 9752 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 15:04:25.209  INFO 9752 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 15:04:25.210  INFO 9752 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 15:04:25.213  INFO 9752 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 15:04:25.214  INFO 9752 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 15:04:25.214  INFO 9752 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 15:04:25.217  INFO 9752 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 15:04:25.217  INFO 9752 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 15:04:25.310  INFO 9752 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:04:25.311  INFO 9752 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:04:25.386  INFO 9752 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:04:25.837  INFO 9752 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 15:04:26.153  INFO 9752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 15:04:26.238  INFO 9752 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 15:04:26.323  INFO 9752 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 15:04:26.331  INFO 9752 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.538 seconds (JVM running for 12.499)
+2017-08-24 15:04:31.458  INFO 9752 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 15:04:31.458  INFO 9752 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 15:04:31.491  INFO 9752 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2017-08-24 15:04:31.768 DEBUG 9752 --- [http-nio-8080-exec-1] com.qualitest.demo.controllers.HiCtrl    : /register : method register , user: null
+2017-08-24 15:04:31.812  WARN 9752 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.NullPointerException
+2017-08-24 15:12:14.963  INFO 8788 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 8788 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 15:12:14.965  INFO 8788 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 15:12:15.049  INFO 8788 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28222198: startup date [Thu Aug 24 15:12:15 IDT 2017]; root of context hierarchy
+2017-08-24 15:12:17.710  INFO 8788 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 15:12:19.917  INFO 8788 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 15:12:19.936  INFO 8788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 15:12:19.939  INFO 8788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 15:12:20.137  INFO 8788 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 15:12:20.137  INFO 8788 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5093 ms
+2017-08-24 15:12:20.452  INFO 8788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 15:12:20.453  INFO 8788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 15:12:20.453  INFO 8788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 15:12:20.453  INFO 8788 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 15:12:20.455  INFO 8788 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 15:12:20.455  INFO 8788 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 15:12:21.418  INFO 8788 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 15:12:21.443  INFO 8788 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 15:12:21.556  INFO 8788 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 15:12:21.558  INFO 8788 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 15:12:21.561  INFO 8788 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 15:12:21.816  INFO 8788 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 15:12:21.982  INFO 8788 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 15:12:22.280  WARN 8788 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 15:12:22.280  WARN 8788 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 15:12:22.665  INFO 8788 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 15:12:23.179  INFO 8788 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 15:12:24.045  INFO 8788 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e162666, org.springframework.security.web.context.SecurityContextPersistenceFilter@53040233, org.springframework.security.web.header.HeaderWriterFilter@7b68688d, org.springframework.security.web.authentication.logout.LogoutFilter@2066773a, com.qualitest.demo.configurations.AdminFilter@7db165d7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3babc964, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4cfac7bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41940841, org.springframework.security.web.session.SessionManagementFilter@316943ff, org.springframework.security.web.access.ExceptionTranslationFilter@4dfd250e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4df0a821]
+2017-08-24 15:12:24.485  INFO 8788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28222198: startup date [Thu Aug 24 15:12:15 IDT 2017]; root of context hierarchy
+2017-08-24 15:12:24.626  INFO 8788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 15:12:24.627  INFO 8788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 15:12:24.628  INFO 8788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 15:12:24.628  INFO 8788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 15:12:24.629  INFO 8788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 15:12:24.633  INFO 8788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 15:12:24.634  INFO 8788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 15:12:24.635  INFO 8788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 15:12:24.638  INFO 8788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 15:12:24.639  INFO 8788 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 15:12:24.789  INFO 8788 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:12:24.790  INFO 8788 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:12:24.885  INFO 8788 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:12:25.348  INFO 8788 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 15:12:25.643  INFO 8788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 15:12:25.727  INFO 8788 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 15:12:25.816  INFO 8788 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 15:12:25.824  INFO 8788 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.367 seconds (JVM running for 12.284)
+2017-08-24 15:12:30.337  INFO 8788 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 15:12:30.338  INFO 8788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 15:12:30.363  INFO 8788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2017-08-24 15:12:30.595 DEBUG 8788 --- [http-nio-8080-exec-1] com.qualitest.demo.controllers.HiCtrl    : /register : method register , user: null
+2017-08-24 15:12:30.640  WARN 8788 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.NullPointerException
+2017-08-24 15:25:21.629  INFO 864 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 864 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 15:25:21.631  INFO 864 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 15:25:21.748  INFO 864 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61e45fbe: startup date [Thu Aug 24 15:25:21 IDT 2017]; root of context hierarchy
+2017-08-24 15:25:23.906  INFO 864 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 15:25:26.905  INFO 864 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 15:25:26.927  INFO 864 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 15:25:26.929  INFO 864 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 15:25:27.162  INFO 864 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 15:25:27.163  INFO 864 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5420 ms
+2017-08-24 15:25:27.505  INFO 864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 15:25:27.506  INFO 864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 15:25:27.507  INFO 864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 15:25:27.507  INFO 864 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 15:25:27.509  INFO 864 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 15:25:27.509  INFO 864 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 15:25:28.482  INFO 864 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 15:25:28.513  INFO 864 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 15:25:28.668  INFO 864 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 15:25:28.670  INFO 864 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 15:25:28.672  INFO 864 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 15:25:28.935  INFO 864 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 15:25:29.109  INFO 864 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 15:25:29.440  WARN 864 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 15:25:29.440  WARN 864 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 15:25:29.843  INFO 864 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 15:25:30.277  INFO 864 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 15:25:31.211  INFO 864 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ec69317, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b57b474, org.springframework.security.web.header.HeaderWriterFilter@126f6975, org.springframework.security.web.authentication.logout.LogoutFilter@56fa86f0, com.qualitest.demo.configurations.AdminFilter@6c3e9e08, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19b55b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1540a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f14e118, org.springframework.security.web.session.SessionManagementFilter@1fde1ffd, org.springframework.security.web.access.ExceptionTranslationFilter@a1c81ae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7bdf8a65]
+2017-08-24 15:25:31.704  INFO 864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61e45fbe: startup date [Thu Aug 24 15:25:21 IDT 2017]; root of context hierarchy
+2017-08-24 15:25:31.834  INFO 864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 15:25:31.835  INFO 864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 15:25:31.836  INFO 864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 15:25:31.837  INFO 864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 15:25:31.837  INFO 864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 15:25:31.846  INFO 864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 15:25:31.846  INFO 864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 15:25:31.846  INFO 864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 15:25:31.849  INFO 864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 15:25:31.849  INFO 864 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 15:25:31.961  INFO 864 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:25:31.961  INFO 864 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:25:32.051  INFO 864 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:25:32.484  INFO 864 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 15:25:32.786  INFO 864 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 15:25:32.870  INFO 864 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 15:25:32.954  INFO 864 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 15:25:32.961  INFO 864 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.838 seconds (JVM running for 12.781)
+2017-08-24 15:27:19.291  INFO 864 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 15:27:19.291  INFO 864 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 15:27:19.327  INFO 864 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+2017-08-24 15:27:19.639 DEBUG 864 --- [http-nio-8080-exec-1] com.qualitest.demo.controllers.HiCtrl    : /register : method register , user: null
+2017-08-24 15:27:19.649  WARN 864 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Failed to invoke @ExceptionHandler method: public org.springframework.http.ResponseEntity<com.qualitest.demo.exceptions.ErrorResponse> com.qualitest.demo.controllers.HiCtrl.exceptionHandling(java.lang.Exception)
+
+java.lang.IllegalArgumentException: HttpStatus must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:134) ~[spring-core-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.http.ResponseEntity.<init>(ResponseEntity.java:106) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.http.ResponseEntity.<init>(ResponseEntity.java:86) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at com.qualitest.demo.controllers.HiCtrl.exceptionHandling(HiCtrl.java:92) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_51]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:384) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:59) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:136) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:74) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1222) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1034) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at com.qualitest.demo.configurations.AdminFilter.doFilter(AdminFilter.java:38) [classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_51]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_51]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_51]
+
+2017-08-24 15:27:19.663 ERROR 864 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.encode(BCryptPasswordEncoder.java:80) ~[spring-security-core-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at com.qualitest.demo.services.UserService.addNewUser(UserService.java:45) ~[classes/:na]
+	at com.qualitest.demo.controllers.HiCtrl.register(HiCtrl.java:85) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_51]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at com.qualitest.demo.configurations.AdminFilter.doFilter(AdminFilter.java:38) ~[classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_51]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_51]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_51]
+
+2017-08-24 15:32:14.883  INFO 10020 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 10020 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 15:32:14.885  INFO 10020 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 15:32:15.399  INFO 10020 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d9806d4: startup date [Thu Aug 24 15:32:15 IDT 2017]; root of context hierarchy
+2017-08-24 15:32:17.533  INFO 10020 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 15:32:19.840  INFO 10020 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 15:32:19.861  INFO 10020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 15:32:19.863  INFO 10020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 15:32:20.059  INFO 10020 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 15:32:20.060  INFO 10020 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4677 ms
+2017-08-24 15:32:20.401  INFO 10020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 15:32:20.402  INFO 10020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 15:32:20.403  INFO 10020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 15:32:20.403  INFO 10020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 15:32:20.405  INFO 10020 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 15:32:20.405  INFO 10020 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 15:32:21.330  INFO 10020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 15:32:21.358  INFO 10020 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 15:32:21.489  INFO 10020 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 15:32:21.491  INFO 10020 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 15:32:21.494  INFO 10020 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 15:32:21.768  INFO 10020 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 15:32:21.979  INFO 10020 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 15:32:22.315  WARN 10020 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 15:32:22.315  WARN 10020 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 15:32:22.710  INFO 10020 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 15:32:23.242  INFO 10020 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 15:32:24.208  INFO 10020 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1899d14a, org.springframework.security.web.context.SecurityContextPersistenceFilter@ea2bc8e, org.springframework.security.web.header.HeaderWriterFilter@739320ab, org.springframework.security.web.authentication.logout.LogoutFilter@23d40187, com.qualitest.demo.configurations.AdminFilter@1c22dc0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27ccb657, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a217edd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55801bd8, org.springframework.security.web.session.SessionManagementFilter@43d729a7, org.springframework.security.web.access.ExceptionTranslationFilter@196f7788, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5cab45cf]
+2017-08-24 15:32:24.735  INFO 10020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d9806d4: startup date [Thu Aug 24 15:32:15 IDT 2017]; root of context hierarchy
+2017-08-24 15:32:24.888  INFO 10020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 15:32:24.890  INFO 10020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 15:32:24.890  INFO 10020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 15:32:24.891  INFO 10020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 15:32:24.892  INFO 10020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 15:32:24.897  INFO 10020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 15:32:24.897  INFO 10020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 15:32:24.898  INFO 10020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 15:32:24.902  INFO 10020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 15:32:24.902  INFO 10020 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 15:32:25.053  INFO 10020 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:32:25.053  INFO 10020 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:32:25.161  INFO 10020 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:32:25.644  INFO 10020 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 15:32:25.999  INFO 10020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 15:32:26.079  INFO 10020 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 15:32:26.161  INFO 10020 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 15:32:26.168  INFO 10020 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.814 seconds (JVM running for 12.772)
+2017-08-24 15:32:31.002  INFO 10020 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 15:32:31.003  INFO 10020 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 15:32:31.032  INFO 10020 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2017-08-24 15:32:31.303 DEBUG 10020 --- [http-nio-8080-exec-1] com.qualitest.demo.controllers.HiCtrl    : /register : method register , user: null
+2017-08-24 15:32:31.345  WARN 10020 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.NullPointerException
+2017-08-24 15:34:47.887  INFO 5772 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 5772 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 15:34:47.889  INFO 5772 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 15:34:47.988  INFO 5772 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6ad2eabd: startup date [Thu Aug 24 15:34:47 IDT 2017]; root of context hierarchy
+2017-08-24 15:34:49.765  INFO 5772 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 15:34:52.204  INFO 5772 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 15:34:52.226  INFO 5772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 15:34:52.228  INFO 5772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 15:34:52.422  INFO 5772 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 15:34:52.423  INFO 5772 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4440 ms
+2017-08-24 15:34:52.708  INFO 5772 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 15:34:52.709  INFO 5772 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 15:34:52.709  INFO 5772 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 15:34:52.710  INFO 5772 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 15:34:52.712  INFO 5772 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 15:34:52.712  INFO 5772 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 15:34:53.584  INFO 5772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 15:34:53.610  INFO 5772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 15:34:53.756  INFO 5772 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 15:34:53.759  INFO 5772 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 15:34:53.762  INFO 5772 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 15:34:54.034  INFO 5772 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 15:34:54.201  INFO 5772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 15:34:54.553  WARN 5772 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 15:34:54.553  WARN 5772 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 15:34:54.947  INFO 5772 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 15:34:55.406  INFO 5772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 15:34:56.327  INFO 5772 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a4f4da8, org.springframework.security.web.context.SecurityContextPersistenceFilter@716c6e1c, org.springframework.security.web.header.HeaderWriterFilter@68199299, org.springframework.security.web.authentication.logout.LogoutFilter@52bccead, com.qualitest.demo.configurations.AdminFilter@33c05a77, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@fc5fdcf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66946cf2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64666b57, org.springframework.security.web.session.SessionManagementFilter@29ddfda4, org.springframework.security.web.access.ExceptionTranslationFilter@29341538, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d26611f]
+2017-08-24 15:34:56.759  INFO 5772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6ad2eabd: startup date [Thu Aug 24 15:34:47 IDT 2017]; root of context hierarchy
+2017-08-24 15:34:56.889  INFO 5772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 15:34:56.891  INFO 5772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 15:34:56.891  INFO 5772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 15:34:56.892  INFO 5772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 15:34:56.892  INFO 5772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 15:34:56.896  INFO 5772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 15:34:56.896  INFO 5772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 15:34:56.897  INFO 5772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 15:34:56.900  INFO 5772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 15:34:56.901  INFO 5772 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 15:34:57.009  INFO 5772 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:34:57.010  INFO 5772 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:34:57.107  INFO 5772 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 15:34:57.577  INFO 5772 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 15:34:57.896  INFO 5772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 15:34:57.977  INFO 5772 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 15:34:58.064  INFO 5772 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 15:34:58.072  INFO 5772 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.177 seconds (JVM running for 12.184)
+2017-08-24 15:35:00.952  INFO 5772 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 15:35:00.952  INFO 5772 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 15:35:00.980  INFO 5772 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2017-08-24 15:35:01.224 DEBUG 5772 --- [http-nio-8080-exec-1] com.qualitest.demo.controllers.HiCtrl    : /register : method register , user: null
+2017-08-24 15:35:01.261  WARN 5772 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.NullPointerException
+2017-08-24 17:14:54.492  INFO 6448 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Starting RentalCarApplication on ALFA-LAB with PID 6448 (D:\uac\IDEA\RentalCar\target\classes started by UA C in D:\uac\IDEA\RentalCar)
+2017-08-24 17:14:54.493  INFO 6448 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : No active profile set, falling back to default profiles: default
+2017-08-24 17:14:54.586  INFO 6448 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d9806d4: startup date [Thu Aug 24 17:14:54 IDT 2017]; root of context hierarchy
+2017-08-24 17:14:55.948  INFO 6448 --- [restartedMain] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'bcryptPasswordEncoder' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/configurations/SecurityConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=tokenHandler; factoryMethodName=bcryptPasswordEncoder; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/qualitest/demo/services/TokenHandler.class]]
+2017-08-24 17:14:58.097  INFO 6448 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-24 17:14:58.117  INFO 6448 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-24 17:14:58.120  INFO 6448 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-08-24 17:14:58.320  INFO 6448 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-24 17:14:58.320  INFO 6448 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3739 ms
+2017-08-24 17:14:58.628  INFO 6448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-24 17:14:58.629  INFO 6448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-24 17:14:58.630  INFO 6448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-24 17:14:58.630  INFO 6448 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-24 17:14:58.632  INFO 6448 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-24 17:14:58.632  INFO 6448 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-24 17:14:59.557  INFO 6448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-24 17:14:59.580  INFO 6448 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-24 17:14:59.711  INFO 6448 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-24 17:14:59.714  INFO 6448 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-24 17:14:59.717  INFO 6448 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-24 17:15:00.105  INFO 6448 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-24 17:15:00.342  INFO 6448 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-08-24 17:15:00.703  WARN 6448 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.qualitest.demo.model.UserAutority
+2017-08-24 17:15:00.704  WARN 6448 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.qualitest.demo.model.UserAutority
+2017-08-24 17:15:01.130  INFO 6448 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-24 17:15:01.621  INFO 6448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-24 17:15:02.549  INFO 6448 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f094242, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c132b39, org.springframework.security.web.header.HeaderWriterFilter@3bffdf4e, org.springframework.security.web.authentication.logout.LogoutFilter@6e77e813, com.qualitest.demo.configurations.AdminFilter@382d7748, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@739320ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34ca7850, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@983adcf, org.springframework.security.web.session.SessionManagementFilter@196f7788, org.springframework.security.web.access.ExceptionTranslationFilter@de7b4bc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3d47ffe5]
+2017-08-24 17:15:03.042  INFO 6448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d9806d4: startup date [Thu Aug 24 17:14:54 IDT 2017]; root of context hierarchy
+2017-08-24 17:15:03.178  INFO 6448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register],methods=[POST]}" onto public void com.qualitest.demo.controllers.HiCtrl.register(com.qualitest.demo.model.User)
+2017-08-24 17:15:03.180  INFO 6448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hi],methods=[GET],produces=[application/json]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.HiCtrl.hello()
+2017-08-24 17:15:03.180  INFO 6448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCurrentUser],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.qualitest.demo.model.User> com.qualitest.demo.controllers.HiCtrl.getCurrentUser()
+2017-08-24 17:15:03.181  INFO 6448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getToken],methods=[POST],consumes=[application/json],produces=[text/plain]}" onto public java.lang.String com.qualitest.demo.controllers.HiCtrl.getAuthToken(com.qualitest.demo.model.User)
+2017-08-24 17:15:03.181  INFO 6448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.qualitest.demo.controllers.PageController.getIndexPage(org.springframework.ui.Model)
+2017-08-24 17:15:03.185  INFO 6448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserInfo/{id}],methods=[GET]}" onto public com.qualitest.demo.model.User com.qualitest.demo.controllers.UserDataController.getUserInfo(int)
+2017-08-24 17:15:03.185  INFO 6448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getUserData/{id}],methods=[GET]}" onto public com.qualitest.demo.model.UserData com.qualitest.demo.controllers.UserDataController.getUserData(int)
+2017-08-24 17:15:03.186  INFO 6448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getCarList/{id}],methods=[GET]}" onto public java.util.List<com.qualitest.demo.model.Car> com.qualitest.demo.controllers.UserDataController.getCarList(int)
+2017-08-24 17:15:03.191  INFO 6448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-24 17:15:03.192  INFO 6448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-24 17:15:03.312  INFO 6448 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 17:15:03.313  INFO 6448 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 17:15:03.409  INFO 6448 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-24 17:15:03.875  INFO 6448 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-08-24 17:15:04.202  INFO 6448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2017-08-24 17:15:04.287  INFO 6448 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-24 17:15:04.377  INFO 6448 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-24 17:15:04.385  INFO 6448 --- [restartedMain] com.qualitest.demo.RentalCarApplication  : Started RentalCarApplication in 11.713 seconds (JVM running for 12.714)
+2017-08-24 17:15:29.712  INFO 6448 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-24 17:15:29.712  INFO 6448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-24 17:15:29.746  INFO 6448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2017-08-24 17:15:29.883 DEBUG 6448 --- [http-nio-8080-exec-1] c.q.demo.controllers.PageController      : URL / getAuthToken method: getAuthToken
+2017-08-24 17:15:29.883 DEBUG 6448 --- [http-nio-8080-exec-1] c.q.demo.controllers.PageController      : URL / getAuthToken method: user defined as :anonymousUser id: -1
+2017-08-24 17:15:38.908 DEBUG 6448 --- [http-nio-8080-exec-9] com.qualitest.demo.controllers.HiCtrl    : /getToken : method getAuthToken user: 1
+2017-08-24 17:15:38.935  INFO 6448 --- [http-nio-8080-exec-9] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-08-24 17:15:39.723 DEBUG 6448 --- [http-nio-8080-exec-10] com.qualitest.demo.controllers.HiCtrl    : /getCurrentUser : method getCurrentUser 
+2017-08-24 17:15:39.848 DEBUG 6448 --- [http-nio-8080-exec-2] c.q.demo.controllers.UserDataController  : URL /getUserData/{id} method:getUserData attribute id is: 1
