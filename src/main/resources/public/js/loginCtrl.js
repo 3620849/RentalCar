@@ -1,7 +1,7 @@
 angular.module("mainApp").controller("loginCtrl",function($scope,registerService){
     $scope.currentForm="lib/loginForm.html";
     $scope.registerForm={};
-    $scope.registerForm.name="LOGIN";
+    $scope.registerForm.name="Login";
     $scope.showRegisterForm = false;
     $scope.showLoginForm = true;
 
@@ -17,13 +17,13 @@ angular.module("mainApp").controller("loginCtrl",function($scope,registerService
     $scope.getLoginForm = function(op){
             $scope.showLoginForm=true;
             $scope.showRegisterForm=false;
-            $scope.registerForm.name="LOGIN";
+            $scope.registerForm.name="Login";
             $scope.openCloseRegform(op);
     }
 
     $scope.getRegisterForm = function(){
         $scope.showLoginForm=false;
         $scope.showRegisterForm=true;
-        $scope.registerForm.name="SIGN UP";
+        $scope.registerForm.name="Sign up";
     }
 })

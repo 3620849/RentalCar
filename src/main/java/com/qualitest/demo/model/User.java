@@ -23,13 +23,14 @@ public  class User implements UserDetails {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.EAGER, orphanRemoval = true)
     private List<UserAutority> authorities;
     private String password;
+    @Column(unique = true)
     private String username;
     private boolean accountNonExpired;
     private boolean accountNonLocked;
     private boolean credentialsNonExpired;
     private boolean enabled;
-    /*@OneToOne(mappedBy = "user",fetch = FetchType.LAZY)
-    private UserData userData;*/
+    @OneToOne
+    private UserData userData;
     //helper method to set roles for this user
     public void grantRole(Role role) {
         if (authorities == null) {

@@ -1,3 +1,11 @@
-<div>
-    <div>all cars</div>
+<div class="row">
+<div ng-repeat="car in carsList" >
+    <div class="card text-white bg-secondary mb-1 ml-1" style="max-width: 20rem;">
+        <div class="card-header">{{car.model}}</div>
+        <div class="card-body">
+            <h4 class="card-title">{{car.vendor}}</h4>
+            <p class="card-text">Year : {{car.year}} some description of the car will be add soon</p>
+        </div>
+    </div>
+</div>
 </div>

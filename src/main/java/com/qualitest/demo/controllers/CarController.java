@@ -22,7 +22,7 @@ public class CarController {
     @Autowired
     CarService carService;
 
-    @PreAuthorize("isAnonymous()")
+    @PreAuthorize("permitAll")
     @RequestMapping(value = "/getAllCars" , method = RequestMethod.GET)
     public ResponseEntity<List<Car>>getAllCars(){
         return new ResponseEntity<>(carService.getAllCarsList(), HttpStatus.OK);

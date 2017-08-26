@@ -20,9 +20,10 @@ public class UserData {
     private String userFamily;
     private String userPhone;
     @OneToOne
+    @JoinColumn(unique=true)
     private User user;
 
-    @OneToMany  (mappedBy = "userData")
+    @OneToMany // (mappedBy = "userData")
     private List<Car> carInUse;
 
 }

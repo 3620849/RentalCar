@@ -43,8 +43,8 @@ public class UserService implements UserDetailsService {
     public void addNewUser(@NonNull User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userDao.addUser(user);
-        UserData userData = new UserData();
+        /*UserData userData = new UserData();
         userData.setUser(userDao.findUserByName(user.getUsername()));
-        userDataDao.addUserData(userData);
+        userDataDao.addUserData(userData);*/
     }
 }

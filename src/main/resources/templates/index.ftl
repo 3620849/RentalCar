@@ -8,15 +8,8 @@
 <body ng-controller="AppCtrl" ng-init="frName = '${username}'">
 <ng-include src="'lib/navbar.html'"></ng-include>
 <div class="container-fluid">
-
-    <login-pop-up></login-pop-up>
-
-    <div class="row">
-        <div ng-view></div>
-
-
-    </div>
-
+   <login-pop-up></login-pop-up>
+   <div class="row" ng-view></div>
 </div>
 </body>
 <script type="text/javascript" src="lib/angular.js"></script>
@@ -32,6 +25,7 @@
 <script src="js/loginPopUpDirective.js"></script>
 <script src="js/registerService.js"></script>
 <script src="js/userDataService.js"></script>
-
-
+<script src="js/accountCtrl.js"></script>
+<script src="js/allCarsCtrl.js"></script>
+<script src="js/carsService.js"></script>
 </html>
