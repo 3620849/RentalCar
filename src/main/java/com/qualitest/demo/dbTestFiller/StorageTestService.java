@@ -1,17 +1,13 @@
-/*
 package com.qualitest.demo.dbTestFiller;
 
 import com.qualitest.demo.dao.UserDataDao;
 import com.qualitest.demo.model.*;
-import com.qualitest.demo.services.UserDataService;
 import com.qualitest.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
@@ -20,16 +16,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-*/
-/*
- * Created by UA C on 25.08.2017.
- *//*
 
 
 @Service
@@ -102,28 +93,36 @@ public class StorageTestService {
                    userData.setUserPhone("5536921");
                    userDataDao.addUserData(userData);
                    }
+                   ClassLoader classLoader = getClass().getClassLoader();
+                   File file = new File(classLoader.getResource("carImg/"+i+".png").getFile());
+                   byte[] img = null;
+                   try {
+                       img = Files.readAllBytes(file.toPath());
+                   } catch (IOException e) {
+                       e.printStackTrace();
+                   }
+                   CarImage carImage = new CarImage();
+                   carImage.setImage(img);
+                   Car car1 = new Car();
+                   car1.setId(i+1);
+                   carImage.setCar(car1);
+                   em.persist(carImage);
                }
+
             };
         });
     }
     public Car create7cars( ArrayList<String> arr,int num){
-
-        ClassLoader classLoader = getClass().getClassLoader();
         String [] elem = arr.get(num).split(" ");
-        File file = new File(classLoader.getResource("carImg/"+num+".png").getFile());
-        byte[] img = null;
+
+
+
         Car car = new Car();
-        try {
-            img = Files.readAllBytes(file.toPath());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         car.setVendor(elem[0]);
         car.setModel(elem[1]);
         car.setYear(Integer.parseInt(elem[2]));
         car.setDescription("cool car "+num);
-        car.setImage(img);
+       // car.setImage(img);
         return car;
     }
 }
-*/

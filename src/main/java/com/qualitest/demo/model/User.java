@@ -29,8 +29,8 @@ public  class User implements UserDetails {
     private boolean accountNonLocked;
     private boolean credentialsNonExpired;
     private boolean enabled;
-    @OneToOne
-    private UserData userData;
+    /*@OneToOne
+    private UserData userData;*/
     //helper method to set roles for this user
     public void grantRole(Role role) {
         if (authorities == null) {
