@@ -10,9 +10,10 @@ angular.module('mainApp').factory('registerService',function($http,$rootScope){
         login: function (user) {
             $http.post("/getToken", user)
                 .then(function (data, status, headers, config) {
-                    fact.user.token = data.data;
+                    //fact.user.token = data.data;
+                    $rootScope.user.token = data.data;
                     $rootScope.$broadcast('userLogin:updated');
-                    console.log(user);
+
                 }, function (error) {
                     console.log(error.data)
                 })

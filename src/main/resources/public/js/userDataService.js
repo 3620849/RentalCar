@@ -1,12 +1,12 @@
 /**
  * Created by UA C on 20.08.2017.
  */
-angular.module('mainApp').factory('userDataService',function($http,$rootScope,registerService){
+angular.module('mainApp').factory('userDataService',function($http,$rootScope){
     var fact = {
-        data:{niga:"hi"},
+        data:{},
         userData:{},
         getCurrentUserData:function(){$http.get("/getCurrentUser",{
-            headers: {'X-Auth-Token': registerService.user.token}
+            headers: {'X-Auth-Token': $rootScope.user.token}
         }).then(function(response){
                 fact.data = response.data;
                 $rootScope.$broadcast('data:updated');
@@ -17,7 +17,7 @@ angular.module('mainApp').factory('userDataService',function($http,$rootScope,re
 
         getUserData:function(){
             $http.get("/api/getUserData/"+fact.data.id,{
-                    headers: {'X-Auth-Token': registerService.user.token}})
+                    headers: {'X-Auth-Token': $rootScope.user.token}})
                 .then(function(response, status, headers, config){
                     fact.userData=response.data;
                     $rootScope.$broadcast('userData:updated');

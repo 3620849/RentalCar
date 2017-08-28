@@ -1,3 +1,4 @@
+/*
 package com.qualitest.demo.dbTestFiller;
 
 import com.qualitest.demo.dao.UserDataDao;
@@ -25,9 +26,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+*/
 /*
  * Created by UA C on 25.08.2017.
- */
+ *//*
+
 
 @Service
 public class StorageTestService {
@@ -123,3 +126,4 @@ public class StorageTestService {
         return car;
     }
 }
+*/

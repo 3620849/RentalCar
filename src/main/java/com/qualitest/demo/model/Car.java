@@ -17,14 +17,14 @@ public class Car {
     @Id
     @GeneratedValue
     private int id;
-    @JsonIgnore
-    /*@ManyToOne
+    /*@JsonIgnore
+    @ManyToOne
     private UserData userData;*/
     private String vendor;
     private String model;
     private int year;
     private String description;
-    @JsonIgnore
+    //@JsonIgnore
     @Lob @Basic(fetch = FetchType.LAZY)
     @Column(name="image")
     private byte[] image;

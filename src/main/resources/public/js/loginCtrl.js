@@ -5,12 +5,14 @@ angular.module("mainApp").controller("loginCtrl",function($scope,registerService
     $scope.showRegisterForm = false;
     $scope.showLoginForm = true;
 
-    $scope.sendForm = function(op){
+    $scope.loginUser = function(op){
         registerService.login(op);
+        /*openCloseRegform from directive loginPopUp will be called on mainCtrl*/
         $scope.openCloseRegform(true);
     }
     $scope.registerUser = function(user){
         registerService.register(user);
+        $rootScope.user = registerService.user;
         $scope.getLoginForm(false);}
 
 

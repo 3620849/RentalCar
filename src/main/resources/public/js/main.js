@@ -4,6 +4,7 @@
 
 var app = angular.module("mainApp",['ngRoute']);
 app.controller("AppCtrl",function($scope,$rootScope){
+    $rootScope.user={};
 });
 app.config(function($routeProvider) {
     $routeProvider
