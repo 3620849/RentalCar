@@ -3,8 +3,9 @@
     <div class="card text-white bg-secondary mb-1 ml-1" style="max-width: 20rem;">
         <div class="card-header">{{car.vendor}}</div>
         <div class="card-body">
-            <h4 class="card-title">{{car.model}}</h4>
-            <img ng-src="data:image/JPEG;base64,{{car.image}}">
+            <h4 class="card-title"ng-init="getCarImgById(car.id)">{{car.model}}</h4>
+            <img  ng-src="data:image/JPEG;base64,{{car.img}}">
+
             <p class="card-text">Year : {{car.year}} description:{{car.description}}</p>
         </div>
     </div>

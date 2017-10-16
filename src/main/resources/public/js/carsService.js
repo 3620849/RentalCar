@@ -3,7 +3,9 @@
  */
 
 angular.module('mainApp').factory('carsService',function($http,$rootScope) {
+
     var fact = {
+
         carList:{},
         getCarList: function(){
             $http.get("/api/getAllCars").then(function (response, status, headers, config) {
@@ -12,7 +14,11 @@ angular.module('mainApp').factory('carsService',function($http,$rootScope) {
             }, function (error) {
                 console.log(error.data)
             })
-        }
-    }
+        },
+        getCarImgById:function(id){
+            return $http.get("api/getCarImgById/"+id); }
+        };
+
     return fact;
+
 });

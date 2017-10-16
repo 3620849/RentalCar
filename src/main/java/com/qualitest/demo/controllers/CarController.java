@@ -4,6 +4,8 @@ import com.qualitest.demo.model.Car;
 import com.qualitest.demo.model.CarImage;
 import com.qualitest.demo.services.CarImageService;
 import com.qualitest.demo.services.CarService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +28,7 @@ public class CarController {
     CarService carService;
     @Autowired
     CarImageService carImageService;
-
+    private final Logger LOGGER = LoggerFactory.getLogger(PageController.class);
     @PreAuthorize("permitAll")
     @RequestMapping(value = "/getAllCars" , method = RequestMethod.GET)
     public ResponseEntity<List<Car>>getAllCars(){
@@ -35,6 +37,7 @@ public class CarController {
     @PreAuthorize("permitAll")
     @RequestMapping(value = "/getCarImgById/{id}" , method = RequestMethod.GET)
     public ResponseEntity<CarImage> getCarImgById(@PathVariable("id")int id){
+        LOGGER.debug("URL / getCarImgById method: id :"+ id );
         return new ResponseEntity<>(carImageService.getCarImgById(id),HttpStatus.OK);
     }
 }

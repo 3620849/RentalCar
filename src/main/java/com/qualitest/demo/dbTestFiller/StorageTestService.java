@@ -1,3 +1,4 @@
+/*
 package com.qualitest.demo.dbTestFiller;
 
 import com.qualitest.demo.dao.UserDataDao;
@@ -126,3 +127,4 @@ public class StorageTestService {
         return car;
     }
 }
+*/

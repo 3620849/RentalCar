@@ -18,6 +18,7 @@ public class CarImage {
     private byte[] image;
     String alt;
     String name;
+    @JsonIgnore
     @OneToOne(fetch = FetchType.LAZY)
     Car car;
 //    @JsonIgnore

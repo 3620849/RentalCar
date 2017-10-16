@@ -2,19 +2,22 @@
 <div class="card bg-light  " >
     <div class="card-header">Person</div>
     <div class="card-body">
-        <h4 class="card-title">Entered as ${username}</h4>
-        <p class="card-text">You role ${roles}</p>
-        <p class="card-text">Data from promice:{{arr}}</p>
-        <p>New Username {{frName}} </p>
+        <h4 class="card-title">Mail{{arr.username}}</h4>
+        <p class="card-text">Password {{arr.password}}</p>
+        <p class="card-text">Your role {{arr.authorities[0].authority}}{{arr.authorities[1].authority}}</p>
+
     </div>
     <br>
     <div class="card bg-light" >
         <div class="card-header">Person Data</div>
         <div class="card-body">
-            <h4 class="card-title">Entered as ${username}</h4>
-            <p class="card-text">You role ${roles}</p>
-            <p class="card-text">Data from promice:{{arr2}}</p>
-            <p>New Username {{frName}} </p>
+            <h4 class="card-title">Name:{{arr2.userName}}</h4>
+            <h4 class="card-title">Second name:{{arr2.userFamily}}</h4>
+            <p class="card-text">You role:{{arr2.user.authorities[0].authority}},{{arr2.user.authorities[1].authority}}</p>
+            <p class="card-text">User id:{{arr2.id}}</p>
+            <p class="card-text">User phone:{{arr2.userPhone}}</p>
+            <p class="card-text">Account Expired:{{arr2.user.accountNonExpired}}</p>
+            <p class="card-text">Account Non Locked:{{arr2.user.accountNonLocked}}</p>
         </div>
     </div>
 </div>
